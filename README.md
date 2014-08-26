@@ -1,4 +1,4 @@
-# simple-itach.js
+# simple-itach
 
 A simple, unofficial and unsupported, node.js module for sending ir commands to Global Caché's iTach devices.
 
