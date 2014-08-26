@@ -81,6 +81,10 @@ itach.send(cmd, function (err, res) {
 
 ## Change log
 
+###### 0.2.1
+
+* Published to npm
+
 ###### 0.2
 
 * Release
