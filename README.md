@@ -81,19 +81,6 @@ itach.send(cmd, function (err, res) {
 
 ## Change log
 
-###### 0.1.3
+###### 0.2
 
-* Changed name
-* Method send's first argument now accept delays as elements.
-
-###### 0.1.2
-
-* Minor changes
-
-###### 0.1.1
-
-* Minor changes
-
-###### 0.1
-
-* Initial working release
+* Release
