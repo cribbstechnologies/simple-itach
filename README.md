@@ -4,6 +4,8 @@ A simple, unofficial and unsupported, node.js module for sending ir commands to 
 
 Tested on iTach IP2IR (PoE model).
 
+There seems to be some other iTach modules already available on npm, you might want to check them out as well.
+
 ## Installation
 
 ```
