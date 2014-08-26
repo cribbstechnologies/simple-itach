@@ -6,11 +6,15 @@ Tested on iTach IP2IR (PoE model).
 
 ## Installation
 
+```
+npm install https://github.com/wafflegolfing/simple-itach.git
+```
+
 ## Usage
 
 Require the simple-itach library
 ```
-var Itach = require('./index.js');
+var Itach = require('simple-itach');
 ```
 
 Initiate a new Itach object with ip of iTach device
@@ -39,7 +43,7 @@ Result is an array with the responses from the itach device. Responses from the 
 ###### Send single command
 
 ```javascript
-var Itach = require('./index.js');
+var Itach = require('simple-itach');
 var itach = new Itach('192.168.0.123');
 var lgPlasmaPwrToggle = 'sendir,1:3,1,38226,1,1,343,171,21,22,21,22,21,65,21,22,21,22,21,22,21,22,21,22,21,65,21,65,21,22,21,65,21,65,21,65,21,65,21,65,21,22,21,22,21,22,21,65,21,22,21,22,21,22,21,22,21,65,21,65,21,65,21,22,21,65,21,65,21,65,21,65,21,3822\r';
 itach.send(lgPlasmaPwrToggle, function (err, res) {
@@ -54,14 +58,14 @@ itach.send(lgPlasmaPwrToggle, function (err, res) {
 ###### Send multiple commands
 
 ```javascript
-var Itach = require('./index.js');
+var Itach = require('simple-itach');
 var itach = new Itach('192.168.0.123');
 var lgPlasmaPwrToggle = 'sendir,1:3,1,38226,1,1,343,171,21,22,21,22,21,65,21,22,21,22,21,22,21,22,21,22,21,65,21,65,21,22,21,65,21,65,21,65,21,65,21,65,21,22,21,22,21,22,21,65,21,22,21,22,21,22,21,22,21,65,21,65,21,65,21,22,21,65,21,65,21,65,21,65,21,3822\r';
 var cmd = [
   lgPlasmaPwrToggle, // send command
-  10000, // wait 10 seconds
+  20000, // wait 20 seconds
   lgPlasmaPwrToggle, // send command again
-  10000, // wait 10 more seconds
+  20000, // wait 20 more seconds
   lgPlasmaPwrToggle // and a final toggle
 ];
 itach.send(cmd, function (err, res) {
