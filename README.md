@@ -9,7 +9,7 @@ There seems to be some other iTach modules already available on npm, you might w
 ## Installation
 
 ```
-npm install https://github.com/wafflegolfing/simple-itach.git
+npm install simple-itach
 ```
 
 ## Usage
