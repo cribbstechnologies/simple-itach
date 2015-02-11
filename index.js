@@ -36,6 +36,7 @@ module.exports = Itach = function (host) {
   this.host = host;
   this.endpoints = {};
   this.server;
+  this.interval;
 };
 Itach.prototype.getEndpoints = function() {return this.endpoints;};
 
@@ -73,11 +74,13 @@ Itach.prototype.locate = function() {
 	});
 	
 	this.server.bind(PORT);
-	setInterval(function(){checkTimeouts()}, 10000);
+	this.interval = setInterval(function(){checkTimeouts()}, 10000);
 };
 
 Itach.prototype.stopLocation = function() {
-	server.close();
+	this.endpoints = {};
+	this.server.close();
+	clearInterval(this.interval);
 };
 
 Itach.prototype.send = function (command, callback) {
